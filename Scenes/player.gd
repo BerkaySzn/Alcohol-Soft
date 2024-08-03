@@ -1,6 +1,6 @@
 extends CharacterBody2D
 #by Mürsel
-@export var inv: Inventory
+@export var inv: Inventory 
 #by Mürsel End
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
@@ -27,3 +27,7 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+#by Mürsel
+func collect(item):
+	inv.insert(item)
+#by Mürsel End
