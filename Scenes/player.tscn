@@ -1,7 +1,8 @@
-[gd_scene load_steps=39 format=3 uid="uid://ymr8w48bbhdl"]
+[gd_scene load_steps=40 format=3 uid="uid://ymr8w48bbhdl"]
 
 [ext_resource type="Script" path="res://Scenes/player.gd" id="1_ct4mv"]
 [ext_resource type="Texture2D" uid="uid://batqj4rnsvgtw" path="res://Assets/Sprite/Player/Human-Worker-Red.png" id="1_ye25w"]
+[ext_resource type="PackedScene" uid="uid://boqtyakrak0nx" path="res://Inventory/inventory_ui.tscn" id="3_7xobh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jkyiu"]
 atlas = ExtResource("1_ye25w")
@@ -290,9 +291,10 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_516vh"]
-radius = 6.0
+radius = 8.0
 
 [node name="Player" type="CharacterBody2D"]
+scale = Vector2(8.88, 8.88)
 script = ExtResource("1_ct4mv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -303,3 +305,14 @@ frame_progress = 0.443174
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_516vh")
+
+[node name="Inventory_UI" parent="." instance=ExtResource("3_7xobh")]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -18.0
+offset_top = -27.0
+offset_right = 18.0
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 2
