@@ -9,11 +9,26 @@ signal update
 
 func insert(item: InventoryItem):
 	var itemslots = slots.filter(func(slot): return slot.item == item)
-	if !itemslots.is_empty():
-		itemslots[0].amount +=1
-	else:
+	var remaining_amount = 1  # Eklenmek istenen miktar
+
+	for slot in itemslots:
+		if slot.amount < 10:
+			var space_in_slot = 10 - slot.amount
+			var amount_to_add = min(remaining_amount, space_in_slot)
+			slot.amount += amount_to_add
+			remaining_amount -= amount_to_add
+			if remaining_amount == 0:
+				break
+
+	if remaining_amount > 0:
 		var emptyslots = slots.filter(func(slot): return slot.item == null)
-		if !emptyslots.is_empty():
-			emptyslots[0].item = item
-			emptyslots[0].amount = 1
+		for slot in emptyslots:
+			if remaining_amount > 0:
+				var amount_to_add = min(remaining_amount, 10)
+				slot.item = item
+				slot.amount = amount_to_add
+				remaining_amount -= amount_to_add
+			else:
+				break
+
 	update.emit()

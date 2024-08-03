@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bhj11cc7d83rd"]
+[gd_scene load_steps=7 format=3 uid="uid://bhj11cc7d83rd"]
 
 [ext_resource type="PackedScene" uid="uid://ymr8w48bbhdl" path="res://Scenes/player.tscn" id="1_m53ln"]
 [ext_resource type="Resource" uid="uid://dmwacoqqdbaf4" path="res://Inventory/player_inventory.tres" id="3_6m84k"]
 [ext_resource type="PackedScene" uid="uid://l1bdja7x8e1p" path="res://Scenes/apple_collectable.tscn" id="3_dl72n"]
+[ext_resource type="PackedScene" uid="uid://dhuvniskunxcb" path="res://Scenes/stick_collectable.tscn" id="4_iqgy7"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_mkv8l"]
 distance = -78.0
@@ -31,7 +32,55 @@ position = Vector2(-402, 62)
 physics_material_override = SubResource("PhysicsMaterial_hoxdi")
 
 [node name="apple_collectable3" parent="." instance=ExtResource("3_dl72n")]
-position = Vector2(-211, 57)
+position = Vector2(-223, 57)
 physics_material_override = SubResource("PhysicsMaterial_hoxdi")
+
+[node name="stick_collectable" parent="." instance=ExtResource("4_iqgy7")]
+position = Vector2(-42, 62)
+
+[node name="stick_collectable2" parent="." instance=ExtResource("4_iqgy7")]
+position = Vector2(12, 66)
+
+[node name="stick_collectable3" parent="." instance=ExtResource("4_iqgy7")]
+position = Vector2(226, 60)
+
+[node name="stick_collectable4" parent="." instance=ExtResource("4_iqgy7")]
+position = Vector2(68, 65)
+
+[node name="stick_collectable5" parent="." instance=ExtResource("4_iqgy7")]
+position = Vector2(292, 59)
+
+[node name="stick_collectable6" parent="." instance=ExtResource("4_iqgy7")]
+position = Vector2(346, 63)
+
+[node name="stick_collectable7" parent="." instance=ExtResource("4_iqgy7")]
+position = Vector2(560, 57)
+
+[node name="stick_collectable8" parent="." instance=ExtResource("4_iqgy7")]
+position = Vector2(402, 62)
+
+[node name="stick_collectable9" parent="." instance=ExtResource("4_iqgy7")]
+position = Vector2(426, 56)
+
+[node name="stick_collectable10" parent="." instance=ExtResource("4_iqgy7")]
+position = Vector2(480, 60)
+
+[node name="stick_collectable11" parent="." instance=ExtResource("4_iqgy7")]
+position = Vector2(694, 54)
+
+[node name="stick_collectable12" parent="." instance=ExtResource("4_iqgy7")]
+position = Vector2(536, 59)
+
+[node name="stick_collectable13" parent="." instance=ExtResource("4_iqgy7")]
+position = Vector2(760, 53)
+
+[node name="stick_collectable14" parent="." instance=ExtResource("4_iqgy7")]
+position = Vector2(814, 57)
+
+[node name="stick_collectable15" parent="." instance=ExtResource("4_iqgy7")]
+position = Vector2(1028, 51)
+
+[node name="stick_collectable16" parent="." instance=ExtResource("4_iqgy7")]
+position = Vector2(870, 56)
 
 [connection signal="input_event" from="Player" to="Player" method="_on_input_event"]
