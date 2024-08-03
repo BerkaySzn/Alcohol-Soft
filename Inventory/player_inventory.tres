@@ -1,8 +1,40 @@
-[gd_resource type="Resource" script_class="Inventory" load_steps=3 format=3 uid="uid://dmwacoqqdbaf4"]
+[gd_resource type="Resource" script_class="Inventory" load_steps=11 format=3 uid="uid://dmwacoqqdbaf4"]
 
-[ext_resource type="Resource" uid="uid://d0jwbdww5csn1" path="res://Inventory/items/apple.tres" id="1_esca2"]
 [ext_resource type="Script" path="res://Inventory/inventory.gd" id="2_5s6qo"]
+[ext_resource type="Script" path="res://Inventory/Inventory_slot.gd" id="2_vmu3r"]
+
+[sub_resource type="Resource" id="Resource_ocaa8"]
+script = ExtResource("2_vmu3r")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_6t5ds"]
+script = ExtResource("2_vmu3r")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_tumr0"]
+script = ExtResource("2_vmu3r")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_2w6to"]
+script = ExtResource("2_vmu3r")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_srjld"]
+script = ExtResource("2_vmu3r")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_ddia0"]
+script = ExtResource("2_vmu3r")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_u8ukv"]
+script = ExtResource("2_vmu3r")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_dkrke"]
+script = ExtResource("2_vmu3r")
+amount = 0
 
 [resource]
 script = ExtResource("2_5s6qo")
-items = Array[Resource("res://Inventory/inventory_item.gd")]([null, null, ExtResource("1_esca2"), null, null, null, null, null])
+slots = Array[ExtResource("2_vmu3r")]([SubResource("Resource_ocaa8"), SubResource("Resource_6t5ds"), SubResource("Resource_tumr0"), SubResource("Resource_2w6to"), SubResource("Resource_srjld"), SubResource("Resource_ddia0"), SubResource("Resource_u8ukv"), SubResource("Resource_dkrke")])

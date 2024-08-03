@@ -294,7 +294,7 @@ animations = [{
 radius = 8.0
 
 [node name="Player" type="CharacterBody2D"]
-scale = Vector2(8.88, 8.88)
+scale = Vector2(3.34365, 3.32)
 script = ExtResource("1_ct4mv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -310,9 +310,10 @@ shape = SubResource("CircleShape2D_516vh")
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -18.0
-offset_top = -27.0
-offset_right = 18.0
-offset_bottom = -9.0
+offset_left = -28.7112
+offset_top = -39.1566
+offset_right = 7.28883
+offset_bottom = -21.1566
 grow_horizontal = 2
 grow_vertical = 2
+metadata/_edit_use_anchors_ = true
