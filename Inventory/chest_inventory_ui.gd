@@ -1,8 +1,9 @@
 extends Control
 
-@onready var inventory: Inventory = preload("res://Inventory/player_inventory.tres")
+@onready var inventory: Inventory = preload("res://Inventory/chest_inventory.tres")
 @onready var ItemStackGuiClass = preload("res://Inventory/itemsStackGui.tscn")
 @onready var slots: Array = $NinePatchRect/GridContainer.get_children()
+signal item_dropped(item, amount)
 
 var is_open = false
 var itemInHand: ItemStackGui
@@ -36,12 +37,6 @@ func update_slots():
 		itemStackGui.inventorySlot = inventorySlot
 		itemStackGui.update()
 
-func _process(_delta):
-	if Input.is_action_just_pressed("Inventory"):
-		if is_open:
-			close()
-		else:
-			open()
 
 
 func open():
