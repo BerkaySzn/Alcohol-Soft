@@ -36,9 +36,7 @@ func update_slots():
 		itemStackGui.inventorySlot = inventorySlot
 		itemStackGui.update()
 
-
 func _process(_delta):
-
 	if Input.is_action_just_pressed("Inventory"):
 		if is_open:
 			close()
