@@ -5,35 +5,35 @@
 
 [sub_resource type="Resource" id="Resource_ocaa8"]
 script = ExtResource("2_vmu3r")
-amount = 0
+amount = null
 
 [sub_resource type="Resource" id="Resource_6t5ds"]
 script = ExtResource("2_vmu3r")
-amount = 0
+amount = null
 
 [sub_resource type="Resource" id="Resource_tumr0"]
 script = ExtResource("2_vmu3r")
-amount = 0
+amount = null
 
 [sub_resource type="Resource" id="Resource_2w6to"]
 script = ExtResource("2_vmu3r")
-amount = 0
+amount = null
 
 [sub_resource type="Resource" id="Resource_srjld"]
 script = ExtResource("2_vmu3r")
-amount = 0
+amount = null
 
 [sub_resource type="Resource" id="Resource_ddia0"]
 script = ExtResource("2_vmu3r")
-amount = 0
+amount = null
 
 [sub_resource type="Resource" id="Resource_u8ukv"]
 script = ExtResource("2_vmu3r")
-amount = 0
+amount = null
 
 [sub_resource type="Resource" id="Resource_dkrke"]
 script = ExtResource("2_vmu3r")
-amount = 0
+amount = null
 
 [resource]
 script = ExtResource("2_5s6qo")

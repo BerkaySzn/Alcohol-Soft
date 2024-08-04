@@ -306,13 +306,7 @@ autoplay = "idle"
 shape = SubResource("CircleShape2D_516vh")
 
 [node name="Inventory_UI" parent="." instance=ExtResource("3_7xobh")]
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -28.7112
-offset_top = -39.1566
-offset_right = 7.28883
-offset_bottom = -21.1566
-grow_horizontal = 2
-grow_vertical = 2
-metadata/_edit_use_anchors_ = true
+offset_left = -36.188
+offset_top = -46.0843
+offset_right = 13.812
+offset_bottom = -22.0843
