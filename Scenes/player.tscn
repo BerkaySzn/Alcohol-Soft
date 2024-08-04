@@ -306,7 +306,7 @@ autoplay = "idle"
 shape = SubResource("CircleShape2D_516vh")
 
 [node name="Inventory_UI" parent="." instance=ExtResource("3_7xobh")]
-offset_left = -36.188
-offset_top = -46.0843
-offset_right = 13.812
-offset_bottom = -22.0843
+offset_left = -72.6751
+offset_top = 13.5542
+offset_right = 28.3249
+offset_bottom = 31.5542

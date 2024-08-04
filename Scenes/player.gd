@@ -84,4 +84,3 @@ func play_anim(dir):
 			anim.play("sw_walk")
 		if dir.x < -0.5 and dir.y < -0.5:
 			anim.play("nw_walk")
-		#123123
