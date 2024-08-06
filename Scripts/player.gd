@@ -3,8 +3,12 @@ const speed = 200.0
 
 var player_state 
 @onready var anim = $AnimatedSprite2D
+#by Mürsel
+signal toggle_inventory()
+@export var inventory_data: InventoryData
+@onready var interact_ray: RayCast2D = $Camera2D/InteractRay
 
-
+#by Mürsel End
 func _physics_process(delta):
 	#by berkay start
 	var dir = Input.get_vector("left", "right", "up", "down")
@@ -13,6 +17,13 @@ func _physics_process(delta):
 		player_state = "idle"
 	elif dir.x != 0 or dir.y != 0:
 		player_state = "walk"
+	#by Mürsel
+	if Input.is_action_just_pressed("Inventory"):
+		toggle_inventory.emit()
+	
+	if Input.is_action_just_pressed("Interact"):
+		interact()
+	#by Mürsel End
 	
 	velocity = speed * dir
 	#by berkay end
@@ -42,3 +53,11 @@ func play_anim(dir):
 			anim.play("sw_walk")
 		if dir.x < -0.5 and dir.y < -0.5:
 			anim.play("nw_walk")
+
+
+#by Mürsel
+func interact() -> void:
+	
+	if interact_ray.is_colliding():
+		interact_ray.get_collider().player_interact()
+#by Mürsel End

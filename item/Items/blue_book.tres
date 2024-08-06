@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://cq3e5i3vihhin"]
+
+[ext_resource type="Script" path="res://item/ItemScripts/item_data.gd" id="1_wvvdx"]
+[ext_resource type="Texture2D" uid="uid://c45bl4mgwa7qp" path="res://Assets/Sprite/Item/#1 - Transparent Icons.png" id="2_oqfhd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bxqju"]
+atlas = ExtResource("2_oqfhd")
+region = Rect2(0, 416, 32, 32)
+
+[resource]
+script = ExtResource("1_wvvdx")
+name = "Book"
+description = "Şirin Babanın Günlüğü"
+stackable = true
+texture = SubResource("AtlasTexture_bxqju")
