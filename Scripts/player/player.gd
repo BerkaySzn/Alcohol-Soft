@@ -3,7 +3,7 @@ const speed = 200.0
 
 var player_state 
 @onready var anim = $AnimatedSprite2D
-
+#BERKE START
 func _ready():
 	InteractManager.player = self # Oyuncuyu InteractManager'a atama
 	print("Player.gd is ready and has access to InteractManager")
@@ -14,9 +14,9 @@ func _ready():
 
 func _input(event):
 	if event.is_action_pressed("ui_interact"):
-		#InteractManager.check_for_interaction()
-		print("player")
-
+		InteractManager.check_for_interaction()
+		#print("player")
+#BERKE END
 func _physics_process(delta):
 	#by berkay start
 	var dir = Input.get_vector("left", "right", "up", "down")
