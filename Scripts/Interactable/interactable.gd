@@ -1,3 +1,4 @@
+#BERKE START
 extends Node2D
 
 func _ready():
@@ -8,4 +9,5 @@ func _exit_tree():
 
 # Bu func etkileşime girildiğinde çağrılıyor
 func interact():
-	print("Interactable.gd Interacted with ", self.name)
+	print("Player interacted with ", get_parent().name)
+#BERKE END
