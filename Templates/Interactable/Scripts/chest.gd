@@ -2,7 +2,12 @@ extends StaticBody2D
 
 signal toggle_inventory(external_inventory_owner)
 
+@onready var interaction_area = $InteractionArea
+
 @export var inventory_data: InventoryData
 
-func player_interact() -> void:
+func _ready():
+	interaction_area.interact = Callable(self,"open_chest")
+	
+func open_chest():
 	toggle_inventory.emit(self)

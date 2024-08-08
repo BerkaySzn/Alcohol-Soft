@@ -11,6 +11,7 @@ region = Rect2(0, 416, 32, 32)
 radius = 28.0179
 
 [node name="blue_book" type="Area2D"]
+collision_mask = 2
 script = ExtResource("1_h6lml")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

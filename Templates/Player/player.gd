@@ -6,7 +6,6 @@ var player_state
 #by Mürsel
 signal toggle_inventory()
 @export var inventory_data: InventoryData
-@onready var interact_ray: RayCast2D = $Camera2D/InteractRay
 
 #by Mürsel End
 func _physics_process(_delta):
@@ -21,8 +20,7 @@ func _physics_process(_delta):
 	if Input.is_action_just_pressed("Inventory"):
 		toggle_inventory.emit()
 	
-	if Input.is_action_just_pressed("Interact"):
-		interact()
+	
 	#by Mürsel End
 	
 	velocity = speed * dir
@@ -55,9 +53,4 @@ func play_anim(dir):
 			anim.play("nw_walk")
 
 
-#by Mürsel
-func interact() -> void:
-	
-	if interact_ray.is_colliding():
-		interact_ray.get_collider().player_interact()
-#by Mürsel End
+

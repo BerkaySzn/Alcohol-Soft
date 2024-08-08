@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bhj11cc7d83rd"]
+[gd_scene load_steps=16 format=3 uid="uid://bhj11cc7d83rd"]
 
 [ext_resource type="Script" path="res://Templates/World/world.gd" id="1_0tnw6"]
 [ext_resource type="Texture2D" uid="uid://kvp10m1h4r43" path="res://Assets/Sprite/Envoriment/survivalgame-terrian-defult.png" id="2_bywhg"]
@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://clex1u6gnuwfj" path="res://Templates/Inventory/InventoryScenes/inventory.tscn" id="5_0csb5"]
 [ext_resource type="PackedScene" uid="uid://ccp6ure1dos2e" path="res://Templates/Inventory/InventoryScenes/slot.tscn" id="6_yj7wa"]
 [ext_resource type="PackedScene" uid="uid://bxpegqlmbxf8t" path="res://Templates/Interactable/Scenes/chest.tscn" id="7_exr01"]
-[ext_resource type="Script" path="res://Templates/Inventory/InventoryScripts/inventory_data.gd" id="8_t6p4n"]
+[ext_resource type="Script" path="res://Templates/Inventory/InventoryScripts/inventory_data.gd" id="8_dsnja"]
 [ext_resource type="Resource" uid="uid://cq3e5i3vihhin" path="res://Templates/item/Items/blue_book.tres" id="9_qyrk6"]
 [ext_resource type="Script" path="res://Templates/Inventory/InventoryScripts/slot_data.gd" id="10_hp4fe"]
 [ext_resource type="PackedScene" uid="uid://4gofo8fcxbww" path="res://Templates/Collectable/blue_book.tscn" id="11_v2hjh"]
@@ -101,14 +101,9 @@ texture_region_size = Vector2i(40, 40)
 tile_size = Vector2i(40, 40)
 sources/0 = SubResource("TileSetAtlasSource_v7mqw")
 
-[sub_resource type="Resource" id="Resource_w4iyf"]
-script = ExtResource("10_hp4fe")
-item_data = ExtResource("9_qyrk6")
-quantity = 7
-
-[sub_resource type="Resource" id="Resource_r4ryv"]
-script = ExtResource("8_t6p4n")
-slot_datas = Array[ExtResource("10_hp4fe")]([SubResource("Resource_w4iyf"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null])
+[sub_resource type="Resource" id="Resource_g56yk"]
+script = ExtResource("8_dsnja")
+slot_datas = Array[ExtResource("10_hp4fe")]([null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null])
 
 [sub_resource type="Resource" id="Resource_lsuyx"]
 script = ExtResource("10_hp4fe")
@@ -163,7 +158,7 @@ layout_mode = 0
 
 [node name="Chest" parent="Interactable" instance=ExtResource("7_exr01")]
 position = Vector2(145, -52)
-inventory_data = SubResource("Resource_r4ryv")
+inventory_data = SubResource("Resource_g56yk")
 
 [node name="collectable" type="Node2D" parent="."]
 

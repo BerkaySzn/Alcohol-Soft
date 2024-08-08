@@ -293,8 +293,9 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_516vh"]
 radius = 8.0
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["player"]]
 scale = Vector2(3.34365, 3.32)
+collision_layer = 2
 script = ExtResource("1_e3yq7")
 inventory_data = ExtResource("2_84ofs")
 
@@ -307,8 +308,3 @@ autoplay = "idle"
 shape = SubResource("CircleShape2D_516vh")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-
-[node name="InteractRay" type="RayCast2D" parent="Camera2D"]
-position = Vector2(4.39882e-05, 1.20482)
-skew = -1.56907
-target_position = Vector2(10527.4, -10527.4)
