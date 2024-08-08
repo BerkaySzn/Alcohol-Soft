@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://bxpegqlmbxf8t"]
+
+[ext_resource type="Script" path="res://Templates/Interactable/Scripts/chest.gd" id="1_7e04i"]
+[ext_resource type="Texture2D" uid="uid://i3a7c5fwau41" path="res://Templates/item/Items/item_atlas.tres" id="1_qqtfc"]
+[ext_resource type="PackedScene" uid="uid://ciear6cu0bhsp" path="res://Templates/Managers/interaction/interaction_area/interaction_area.tscn" id="3_axx2e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jnhek"]
+size = Vector2(44, 42)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_q3ax5"]
+radius = 63.0317
+
+[node name="Chest" type="StaticBody2D" groups=["external_inventory"]]
+script = ExtResource("1_7e04i")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(7.5, 7.5)
+scale = Vector2(1.46875, 1.46875)
+texture = ExtResource("1_qqtfc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8, 7)
+shape = SubResource("RectangleShape2D_jnhek")
+
+[node name="InteractionArea" parent="." instance=ExtResource("3_axx2e")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+position = Vector2(7, 8)
+shape = SubResource("CircleShape2D_q3ax5")
