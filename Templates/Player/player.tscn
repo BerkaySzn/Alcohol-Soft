@@ -1,6 +1,6 @@
 [gd_scene load_steps=39 format=3 uid="uid://ymr8w48bbhdl"]
 
-[ext_resource type="Script" path="res://Scripts/player/player.gd" id="1_s6xdg"]
+[ext_resource type="Script" path="res://Templates/Player/player.gd" id="1_s6xdg"]
 [ext_resource type="Texture2D" uid="uid://batqj4rnsvgtw" path="res://Assets/Sprites/Player/Human-Worker-Red.png" id="1_ye25w"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jkyiu"]
@@ -289,8 +289,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_516vh"]
-radius = 8.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5lf3j"]
+size = Vector2(7.77593, 1.80723)
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 scale = Vector2(3.34365, 3.32)
@@ -302,4 +302,5 @@ animation = &"idle"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_516vh")
+position = Vector2(1.78262e-07, 6.3253)
+shape = SubResource("RectangleShape2D_5lf3j")

@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bhj11cc7d83rd"]
 
-[ext_resource type="PackedScene" uid="uid://ymr8w48bbhdl" path="res://Scenes/player/player.tscn" id="2_lsnx5"]
+[ext_resource type="PackedScene" uid="uid://ymr8w48bbhdl" path="res://Templates/Player/player.tscn" id="2_lsnx5"]
 [ext_resource type="Texture2D" uid="uid://kvp10m1h4r43" path="res://Assets/Sprites/Envoriment/survivalgame-terrian-defult.png" id="5_lny4w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v7mqw"]
