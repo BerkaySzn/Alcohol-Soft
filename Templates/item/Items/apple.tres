@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://c5kq62vpgrv48"]
+
+[ext_resource type="Script" path="res://Templates/item/ItemScripts/item_data.gd" id="1_0xrlm"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_josic"]
+load_path = "res://.godot/imported/#1 - Transparent Icons.png-4d918eadf09a5bce42d40746e56dd62c.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qdmhu"]
+atlas = SubResource("CompressedTexture2D_josic")
+region = Rect2(0, 448, 32, 32)
+
+[resource]
+script = ExtResource("1_0xrlm")
+name = "Apple"
+description = "Elma La İşte"
+stackable = true
+texture = SubResource("AtlasTexture_qdmhu")
