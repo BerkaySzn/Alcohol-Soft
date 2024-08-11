@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://d4mf7g7n8sdht"]
+
+[ext_resource type="Script" path="res://Templates/item/ItemScripts/item_data.gd" id="1_p55d5"]
+[ext_resource type="Texture2D" uid="uid://c45bl4mgwa7qp" path="res://Assets/Sprite/Item/#1 - Transparent Icons.png" id="2_gwo3k"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a777b"]
+atlas = ExtResource("2_gwo3k")
+region = Rect2(96, 448, 32, 32)
+
+[resource]
+script = ExtResource("1_p55d5")
+name = "Limon"
+description = ""
+stackable = false
+texture = SubResource("AtlasTexture_a777b")

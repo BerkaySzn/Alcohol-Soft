@@ -1,8 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://bxpegqlmbxf8t"]
+[gd_scene load_steps=7 format=3 uid="uid://bxpegqlmbxf8t"]
 
 [ext_resource type="Script" path="res://Templates/Interactable/Scripts/chest.gd" id="1_7e04i"]
-[ext_resource type="Texture2D" uid="uid://i3a7c5fwau41" path="res://Templates/item/Items/item_atlas.tres" id="1_qqtfc"]
 [ext_resource type="PackedScene" uid="uid://ciear6cu0bhsp" path="res://Templates/Managers/interaction/interaction_area/interaction_area.tscn" id="3_axx2e"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xme7s"]
+load_path = "res://.godot/imported/#1 - Transparent Icons.png-4d918eadf09a5bce42d40746e56dd62c.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5tdwj"]
+atlas = SubResource("CompressedTexture2D_xme7s")
+region = Rect2(352, 352, 32, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jnhek"]
 size = Vector2(44, 42)
@@ -16,7 +22,7 @@ script = ExtResource("1_7e04i")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(7.5, 7.5)
 scale = Vector2(1.46875, 1.46875)
-texture = ExtResource("1_qqtfc")
+texture = SubResource("AtlasTexture_5tdwj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(8, 7)

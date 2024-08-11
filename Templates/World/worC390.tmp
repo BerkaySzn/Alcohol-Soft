@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bhj11cc7d83rd"]
+[gd_scene load_steps=18 format=3 uid="uid://bhj11cc7d83rd"]
 
 [ext_resource type="Script" path="res://Templates/World/world.gd" id="1_0tnw6"]
 [ext_resource type="Texture2D" uid="uid://kvp10m1h4r43" path="res://Assets/Sprite/Envoriment/survivalgame-terrian-defult.png" id="2_bywhg"]
@@ -12,7 +12,6 @@
 [ext_resource type="Resource" uid="uid://cq3e5i3vihhin" path="res://Templates/item/Items/blue_book.tres" id="9_qyrk6"]
 [ext_resource type="Script" path="res://Templates/Inventory/InventoryScripts/slot_data.gd" id="10_hp4fe"]
 [ext_resource type="PackedScene" uid="uid://4gofo8fcxbww" path="res://Templates/Collectable/blue_book.tscn" id="11_v2hjh"]
-[ext_resource type="PackedScene" uid="uid://cegwyq12kdi6p" path="res://Templates/NPC/npc.tscn" id="13_occuk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v7mqw"]
 texture = ExtResource("2_bywhg")
@@ -106,16 +105,11 @@ sources/0 = SubResource("TileSetAtlasSource_v7mqw")
 [sub_resource type="Resource" id="Resource_ic35j"]
 script = ExtResource("10_hp4fe")
 item_data = ExtResource("9_1mvkt")
-quantity = 1
-
-[sub_resource type="Resource" id="Resource_6iut1"]
-script = ExtResource("10_hp4fe")
-item_data = ExtResource("9_1mvkt")
-quantity = 1
+quantity = 3
 
 [sub_resource type="Resource" id="Resource_g56yk"]
 script = ExtResource("8_dsnja")
-slot_datas = Array[ExtResource("10_hp4fe")]([SubResource("Resource_ic35j"), SubResource("Resource_6iut1"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null])
+slot_datas = Array[ExtResource("10_hp4fe")]([SubResource("Resource_ic35j"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null])
 
 [sub_resource type="Resource" id="Resource_lsuyx"]
 script = ExtResource("10_hp4fe")
@@ -177,6 +171,3 @@ inventory_data = SubResource("Resource_g56yk")
 [node name="blue_book" parent="collectable" instance=ExtResource("11_v2hjh")]
 position = Vector2(38, -68)
 slot_data = SubResource("Resource_lsuyx")
-
-[node name="Npc" parent="." instance=ExtResource("13_occuk")]
-position = Vector2(-182, -98)

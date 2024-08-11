@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://cv1i4g0rrkgux"]
+
+[ext_resource type="Script" path="res://dialogue/dialogue.gd" id="1_lmev0"]
+
+[node name="Dialogue" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 113.0
+offset_top = 51.0
+offset_right = 299.0
+offset_bottom = 161.0
+scale = Vector2(0.4, 0.4)
+script = ExtResource("1_lmev0")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_right = 46.0
+offset_bottom = 22.0
+scale = Vector2(4, 4)
+
+[node name="Name" type="RichTextLabel" parent="NinePatchRect"]
+layout_mode = 2
+offset_right = 174.0
+offset_bottom = 23.0
+scale = Vector2(0.2, 0.2)
+text = "Name:"
+
+[node name="Text" type="RichTextLabel" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 6.0
+offset_right = 204.0
+offset_bottom = 93.0
+scale = Vector2(0.2, 0.2)
+text = "konuşmak..."

@@ -11,3 +11,5 @@ func _ready():
 	
 func open_chest():
 	toggle_inventory.emit(self)
+	print(inventory_data.slot_datas[0].item_data.name)
+	
